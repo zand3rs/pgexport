@@ -24,5 +24,12 @@
     "pgexport": "./index.js"
   },
   "dependencies": {
+    "async": "^2.4.1",
+    "commander": "^2.10.0",
+    "fs-extra": "^3.0.1",
+    "lodash": "^4.17.4",
+    "pg": "^6.4.0",
+    "prompt": "^1.0.0",
+    "string-to-stream": "^1.1.0"
   }
 }
