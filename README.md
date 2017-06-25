@@ -18,18 +18,22 @@ $ pgexport
 
   Options:
 
-    -h, --help                output usage information
-    -v, --version             output the version number
-    --connect <connect>       Db connection string
-    --to <to>                 Destination file
-    --from <from>             Source table, subquery or sql file
-    --where <where>           Query criteria
-    -f, --force [true|false]  Non-interactive, default=false
-    -d, --debug [true|false]  Show debug messages, default=false
+    -h, --help                 output usage information
+    -v, --version              output the version number
+    --connect <connect>        Db connection string
+    --to <to>                  Destination file
+    --from <from>              Source table, subquery or sql file
+    --where <where>            Query criteria
+    --local-dir <local_dir>    Local directory where remote files are synced, default=/tmp/pgexport
+    --access-key <access_key>  AWS access key
+    --secret-key <secret_key>  AWS secret key
+    -f, --force [true|false]   Non-interactive, default=false
+    -d, --debug [true|false]   Show debug messages, default=false
 
 
 $ pgexport --connect="user@localhost" --from="public.logs" --to="/path/to/file.log"
 $ pgexport --connect="user@localhost" --from="public.logs" --to="/path/to/file.log.gz" --where="name='foo'" -f
+$ pgexport --connect='user@localhost' --from='public.logs' --to="s3://bucket/path/to/file.log.gz" -f
 $ pgexport --connect="user@localhost" --from="/path/to/query.sql" --to="tmp/logs.log" -f -d
 $ pgexport --connect="user@localhost" --from="select id, name, ts from public.logs" --to="/path/to/file.log"
 
