@@ -1,7 +1,7 @@
 {
   "name": "pgexport",
   "description": "Export data from PostgreSQL database to file.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "pgexport",
     "export",
